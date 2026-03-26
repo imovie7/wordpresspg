@@ -1,0 +1,60 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "woocommerce"
+      },
+      "activate": true
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "polylang"
+      },
+      "activate": true
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "woo-poly-integration"
+      },
+      "activate": true
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "wordpress.org/themes",
+        "slug": "storefront"
+      },
+      "activate": true
+    },
+    {
+      "step": "setSiteLanguage",
+      "language": "zh_CN"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp option update blogname 'SecretGarden | 秘密花园'"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp option update blogdescription 'Premium Adult Lifestyle Store | 高端成人生活方式精品店'"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp wc --user=admin tool run install_pages"
+    }
+  ]
+}
