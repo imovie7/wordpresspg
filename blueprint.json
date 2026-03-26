@@ -46,11 +46,11 @@
     },
     {
       "step": "wp-cli",
-      "command": "wp option update blogname 'SecretGarden | 秘密花园'"
+      "command": "wp option update blogname 'SecretGarden'"
     },
     {
       "step": "wp-cli",
-      "command": "wp option update blogdescription 'Premium Adult Lifestyle Store | 高端成人生活方式精品店'"
+      "command": "wp option update blogdescription 'Premium Adult Lifestyle Store'"
     },
     {
       "step": "wp-cli",
